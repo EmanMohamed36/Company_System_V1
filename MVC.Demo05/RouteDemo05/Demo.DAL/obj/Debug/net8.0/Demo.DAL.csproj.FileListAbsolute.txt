@@ -1,0 +1,12 @@
+F:\RouteAcademayVersion02\MVC\MVC.Demo05\RouteDemo05\Demo.DAL\bin\Debug\net8.0\Demo.DAL.deps.json
+F:\RouteAcademayVersion02\MVC\MVC.Demo05\RouteDemo05\Demo.DAL\bin\Debug\net8.0\Demo.DAL.dll
+F:\RouteAcademayVersion02\MVC\MVC.Demo05\RouteDemo05\Demo.DAL\bin\Debug\net8.0\Demo.DAL.pdb
+F:\RouteAcademayVersion02\MVC\MVC.Demo05\RouteDemo05\Demo.DAL\obj\Debug\net8.0\Demo.DAL.csproj.AssemblyReference.cache
+F:\RouteAcademayVersion02\MVC\MVC.Demo05\RouteDemo05\Demo.DAL\obj\Debug\net8.0\Demo.DAL.GeneratedMSBuildEditorConfig.editorconfig
+F:\RouteAcademayVersion02\MVC\MVC.Demo05\RouteDemo05\Demo.DAL\obj\Debug\net8.0\Demo.DAL.AssemblyInfoInputs.cache
+F:\RouteAcademayVersion02\MVC\MVC.Demo05\RouteDemo05\Demo.DAL\obj\Debug\net8.0\Demo.DAL.AssemblyInfo.cs
+F:\RouteAcademayVersion02\MVC\MVC.Demo05\RouteDemo05\Demo.DAL\obj\Debug\net8.0\Demo.DAL.csproj.CoreCompileInputs.cache
+F:\RouteAcademayVersion02\MVC\MVC.Demo05\RouteDemo05\Demo.DAL\obj\Debug\net8.0\Demo.DAL.dll
+F:\RouteAcademayVersion02\MVC\MVC.Demo05\RouteDemo05\Demo.DAL\obj\Debug\net8.0\refint\Demo.DAL.dll
+F:\RouteAcademayVersion02\MVC\MVC.Demo05\RouteDemo05\Demo.DAL\obj\Debug\net8.0\Demo.DAL.pdb
+F:\RouteAcademayVersion02\MVC\MVC.Demo05\RouteDemo05\Demo.DAL\obj\Debug\net8.0\ref\Demo.DAL.dll
