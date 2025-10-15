@@ -1,0 +1,24 @@
+﻿@model DepartmentViewModel
+
+<div class="mb-3">
+    <label asp-for="Code" class="form-label"></label>
+    <input asp-for="Code" class="form-control" placeholder="Department Code">
+    <span asp-validation-for="Code" class="text-danger"></span>
+</div>
+
+<div class=" mb-3 ">
+    <label asp-for="Name" class="form-label "></label>
+    <input asp-for="Name" class="form-control" placeholder="Department Name">
+    <span asp-validation-for="Name" class="text-danger"></span>
+</div>
+
+<div class=" mb-3">
+    <label asp-for="Description" class="form-label"></label>
+    <textarea asp-for="Description" class="form-control" placeholder="Department Description"></textarea>
+    <span asp-validation-for="Description" class="text-danger"></span>
+</div>
+<div class=" mb-3">
+    <label asp-for="CreatedOn" class="form-label"></label>
+    <input asp-for="CreatedOn" class="form-control" type="date" placeholder="Department Code">
+    <span asp-validation-for="CreatedOn" class="text-danger"></span>
+</div>

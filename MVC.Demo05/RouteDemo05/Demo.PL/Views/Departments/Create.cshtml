@@ -1,0 +1,31 @@
+﻿@model DepartmentViewModel
+
+<div class="row justify-content-center align-content-center mt-3">
+    <h1 class="col-8 my-2">Create Department</h1>
+    <br />
+
+    <form class="col-8" asp-action="Create" method="post">
+
+        <div asp-validation-summary="ModelOnly" class="text-danger">
+        </div>
+       
+        @* code will be here *@
+        <partial name="PartialViews/CreateEditPartialView"/>
+
+        <div class="mt-4 m-auto">
+            <button type="submit" class="btn btn-primary">Create</button>
+            <a class="btn btn-outline-dark" asp-controller="Departments" asp-action="Index">Back to List</a>
+
+
+        </div>
+
+    </form>
+</div>
+
+
+@section ValidationScripts{
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
+}
+

@@ -3,6 +3,7 @@ using Demo.DAL.Models.Shared;
 using Demo.DAL.Models.Shared.Enums;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using System.Reflection.Emit;
 
 
 namespace Demo.DAL.Data.Configurations
@@ -24,6 +25,8 @@ namespace Demo.DAL.Data.Configurations
                 );
 
             base.Configure(builder);
+
+           
             /// validation of Age 
             // validation of address
         }

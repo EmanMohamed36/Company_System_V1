@@ -12,10 +12,16 @@ namespace Demo.BLL.Services.Classes
     {
         public IEnumerable<EmployeeDTO> GetAllEmployee(bool withTrack = false)
         {
-            var employees = _employeeRepository.GetAll();
-            var employeesDTO = _mapper.Map<IEnumerable<Employee> , IEnumerable<EmployeeDTO>>(employees);    
-
-            return employeesDTO;
+            //var employees = _employeeRepository.GetAll();
+            //var employeesDTO = _mapper.Map<IEnumerable<Employee> , IEnumerable<EmployeeDTO>>(employees);    
+           // return employeesDTO;
+            var res = _employeeRepository.GetAll(e => new EmployeeDTO
+            {
+                Id = e.Id,
+                Name = e.Name,
+                Age = e.Age
+            });
+            return res;
         }
        public  EmployeeDetailsDTO? GetEmployeeById(int id)
         { 

@@ -1,0 +1,9 @@
+﻿IEnumerable => Execute in Memory Of Application (RAM) 
+			=> return all records from DataBase
+
+
+IQueryable => return Only Data You want
+
+
+Anti Foreign Token
+

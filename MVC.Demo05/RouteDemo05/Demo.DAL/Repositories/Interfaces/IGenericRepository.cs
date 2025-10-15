@@ -1,5 +1,6 @@
 ﻿
 using Demo.DAL.Models.Shared;
+using System.Linq.Expressions;
 
 namespace Demo.DAL.Repositories.Interfaces
 {
@@ -11,7 +12,12 @@ namespace Demo.DAL.Repositories.Interfaces
         int Update(TEntity entity);
 
         IEnumerable<TEntity> GetAll(bool withTracking = false);
+        IEnumerable<TResult> GetAll<TResult>(Expression<Func<TEntity, TResult>> selector);
 
         TEntity? GetById(int id);
+
+        IEnumerable<TEntity> GetIEnumerable();
+        IQueryable<TEntity> GetIQueryable();
+
     }
 }

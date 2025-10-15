@@ -5,7 +5,9 @@ using Demo.BLL.Services.Interfaces;
 using Demo.DAL.Data;
 using Demo.DAL.Repositories.Classes;
 using Demo.DAL.Repositories.Interfaces;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 
 namespace Demo.PL
 {
@@ -16,7 +18,10 @@ namespace Demo.PL
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-            builder.Services.AddControllersWithViews();
+            builder.Services.AddControllersWithViews(options =>
+            {
+                options.Filters.Add(new AutoValidateAntiforgeryTokenAttribute());
+            });
 
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
             {
@@ -24,7 +29,7 @@ namespace Demo.PL
                 options.UseSqlServer(connectionString);
             });
             builder.Services.AddScoped<IDepartmentRepository, DepartmentRepository>();
-       
+            builder.Services.AddScoped<IDepartmentServices, DepartmentServices>();
 
             builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
             builder.Services.AddScoped<IEmployeeService, EmployeeService>();

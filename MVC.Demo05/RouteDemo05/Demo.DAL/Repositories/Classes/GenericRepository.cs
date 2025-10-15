@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -42,8 +43,25 @@ namespace Demo.DAL.Repositories.Classes
                     .ToList();
         }
 
+        IEnumerable<TResult> IGenericRepository<TEntity>.GetAll<TResult>(Expression<Func<TEntity, TResult>> selector)
+        {
+            return _context.Set<TEntity>().Where(entity => entity.IsDeleted == false).Select(selector).ToList();
+        }
+
         //public TEntity? GetById(int id) => _context.Set<TEntity>().Find(id);
         public TEntity? GetById(int id) => _context.Set<TEntity>().FirstOrDefault(e => e.Id == id && e.IsDeleted == false);
 
+        IEnumerable<TEntity> IGenericRepository<TEntity>.GetIEnumerable()
+        {
+            return _context.Set<TEntity>();
+
+        }
+
+        IQueryable<TEntity> IGenericRepository<TEntity>.GetIQueryable()
+        {
+            return _context.Set<TEntity>();
+        }
+
+      
     }
 }

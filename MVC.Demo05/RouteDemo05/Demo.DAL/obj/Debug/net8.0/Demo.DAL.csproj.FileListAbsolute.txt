@@ -10,3 +10,16 @@ F:\RouteAcademayVersion02\MVC\MVC.Demo05\RouteDemo05\Demo.DAL\obj\Debug\net8.0\D
 F:\RouteAcademayVersion02\MVC\MVC.Demo05\RouteDemo05\Demo.DAL\obj\Debug\net8.0\refint\Demo.DAL.dll
 F:\RouteAcademayVersion02\MVC\MVC.Demo05\RouteDemo05\Demo.DAL\obj\Debug\net8.0\Demo.DAL.pdb
 F:\RouteAcademayVersion02\MVC\MVC.Demo05\RouteDemo05\Demo.DAL\obj\Debug\net8.0\ref\Demo.DAL.dll
+C:\Users\password\Company_System_V1\MVC.Demo05\RouteDemo05\Demo.DAL\bin\Debug\net8.0\Demo.DAL.deps.json
+C:\Users\password\Company_System_V1\MVC.Demo05\RouteDemo05\Demo.DAL\bin\Debug\net8.0\Demo.DAL.dll
+C:\Users\password\Company_System_V1\MVC.Demo05\RouteDemo05\Demo.DAL\bin\Debug\net8.0\Demo.DAL.pdb
+C:\Users\password\Company_System_V1\MVC.Demo05\RouteDemo05\Demo.DAL\obj\Debug\net8.0\Demo.DAL.csproj.AssemblyReference.cache
+C:\Users\password\Company_System_V1\MVC.Demo05\RouteDemo05\Demo.DAL\obj\Debug\net8.0\Demo.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\password\Company_System_V1\MVC.Demo05\RouteDemo05\Demo.DAL\obj\Debug\net8.0\Demo.DAL.AssemblyInfoInputs.cache
+C:\Users\password\Company_System_V1\MVC.Demo05\RouteDemo05\Demo.DAL\obj\Debug\net8.0\Demo.DAL.AssemblyInfo.cs
+C:\Users\password\Company_System_V1\MVC.Demo05\RouteDemo05\Demo.DAL\obj\Debug\net8.0\Demo.DAL.csproj.CoreCompileInputs.cache
+C:\Users\password\Company_System_V1\MVC.Demo05\RouteDemo05\Demo.DAL\obj\Debug\net8.0\Demo.DAL.sourcelink.json
+C:\Users\password\Company_System_V1\MVC.Demo05\RouteDemo05\Demo.DAL\obj\Debug\net8.0\Demo.DAL.dll
+C:\Users\password\Company_System_V1\MVC.Demo05\RouteDemo05\Demo.DAL\obj\Debug\net8.0\refint\Demo.DAL.dll
+C:\Users\password\Company_System_V1\MVC.Demo05\RouteDemo05\Demo.DAL\obj\Debug\net8.0\Demo.DAL.pdb
+C:\Users\password\Company_System_V1\MVC.Demo05\RouteDemo05\Demo.DAL\obj\Debug\net8.0\ref\Demo.DAL.dll

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0W5VA3/Lg/A=",
+  "dgSpecHash": "XExRiJlorA8=",
   "success": true,
-  "projectFilePath": "F:\\RouteAcademayVersion02\\MVC\\MVC.Demo05\\RouteDemo05\\Demo.BLL\\Demo.BLL.csproj",
+  "projectFilePath": "C:\\Users\\password\\Company_System_V1\\MVC.Demo05\\RouteDemo05\\Demo.BLL\\Demo.BLL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\password\\.nuget\\packages\\automapper\\15.0.1\\automapper.15.0.1.nupkg.sha512",
     "C:\\Users\\password\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",

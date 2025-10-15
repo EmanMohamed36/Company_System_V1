@@ -13,11 +13,12 @@ namespace Demo.DAL.Data
 {
     public class ApplicationDbContext(DbContextOptions<ApplicationDbContext>options) :DbContext(options) //primary constructor
     {
-       // public DbSet<Department>Departments { get; set; }
+        public DbSet<Department>Departments { get; set; }
         public DbSet<Employee> Employees { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+            
         }
     }
 }
