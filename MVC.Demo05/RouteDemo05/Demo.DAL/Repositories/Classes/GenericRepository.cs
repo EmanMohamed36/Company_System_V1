@@ -14,20 +14,20 @@ namespace Demo.DAL.Repositories.Classes
 {
     public class GenericRepository<TEntity>(ApplicationDbContext _context):IGenericRepository<TEntity> where TEntity : BaseEntity
     {
-        public int Add(TEntity entity)
+        public void Add(TEntity entity)
         {
             _context.Set<TEntity>().Add(entity);
-            return _context.SaveChanges();
+          
         }
-        public int Update(TEntity entity)
+        public void Update(TEntity entity)
         {
             _context.Set<TEntity>().Update(entity);
-            return _context.SaveChanges();
+            
         }
-        public int Delete(TEntity entity)
+        public void Delete(TEntity entity)
         {
             _context.Set<TEntity>().Remove(entity);
-            return _context.SaveChanges();
+            
         }
 
         public IEnumerable<TEntity> GetAll(bool withTrack = false)
@@ -62,6 +62,10 @@ namespace Demo.DAL.Repositories.Classes
             return _context.Set<TEntity>();
         }
 
-      
+        IEnumerable<TEntity> IGenericRepository<TEntity>.GetAll(Expression<Func<TEntity, bool>> predicate)
+        {
+            return _context.Set<TEntity>().Where(entity => entity.IsDeleted == false ).Where(predicate).ToList();
+
+        }
     }
 }

@@ -16,7 +16,7 @@ namespace Demo.DAL.Models.DepartmentModel
         public string? Description { get; set; }
 
         // Navigation Property - One Department has many Employees
-        public ICollection<Employee> Employees { get; set; } = new List<Employee>();
+        //public ICollection<Employee> Employees { get; set; } = new List<Employee>();
 
     }
 }

@@ -35,7 +35,7 @@ namespace Demo.BLL.Factories
                 IsDeleted = department.IsDeleted,
                 DateOfCreation = DateOnly.FromDateTime(department.CreatedOn),
                 LastModifiedOn = DateOnly.FromDateTime(department.LastModifiedOn)
-
+               
 
             };
         }

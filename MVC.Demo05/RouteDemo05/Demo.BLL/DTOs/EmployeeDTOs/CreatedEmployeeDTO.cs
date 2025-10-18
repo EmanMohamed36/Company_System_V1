@@ -1,5 +1,6 @@
 ﻿using Demo.DAL.Models.EmployeeModel;
 using Demo.DAL.Models.Shared.Enums;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -36,5 +37,6 @@ namespace Demo.BLL.DTOs.EmployeeDTOs
         public Gender? Gender { get; set; }
         [Required(ErrorMessage = "Employee Type Reguired")]
         public EmployeeType? EmployeeType { get; set; }
+        public IFormFile? Image { get; set; }
     }
 }

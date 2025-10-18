@@ -27,12 +27,14 @@ namespace Demo.DAL.Models.EmployeeModel
         public Gender Gender { get; set; }
         public EmployeeType EmployeeType { get; set; }
 
-        // Foreign Key
-        [ForeignKey(nameof(Department))]
-        public int DepartmentId { get; set; }
+        public string? ImgName { get; set; }
 
-        // Navigation Property - Each Employee has one Department
-        public Department Department { get; set; } = null!;
+        //// Foreign Key
+        //[ForeignKey(nameof(Department))]
+        //public int DepartmentId { get; set; }
+
+        //// Navigation Property - Each Employee has one Department
+        //public Department Department { get; set; } = null!;
 
     }
 }

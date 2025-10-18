@@ -13,6 +13,10 @@ namespace Demo.PL.Controllers
         [HttpGet]
         public IActionResult Index()
         {
+            //ViewData["Message"] = "Hello from View Data";
+            //ViewBag.Msg = "Hello from View Bag"; // Dynamic type
+            ViewData["Message"] = new DepartmentDTO { Name = "Test View Data" };
+            ViewBag.Msg = new DepartmentDTO { Name = "Test View Bag" };
             var departments = _departmentService.GetAllDepartment();
             return View(departments);
         }
@@ -33,15 +37,18 @@ namespace Demo.PL.Controllers
                 {
                     var departmentDTO = departmentView.FromViewModelToCreatedDTO();
                     int res = _departmentService.AddDepartment(departmentDTO);
+                    string msg;
                     if (res > 0)
                     {
-                        return RedirectToAction(nameof(Index));
-
+                        msg = $"Department {departmentDTO.Name} is Created Successfully";
                     }
                     else
                     {
-                        return View(departmentDTO);
+                        msg = $"Department{departmentDTO.Name} Creation Faild";
                     }
+                    TempData["Message"] = msg;
+                    return RedirectToAction(nameof(Index));
+
                     // return View(nameof(Index));
                 }
                 catch (Exception ex)

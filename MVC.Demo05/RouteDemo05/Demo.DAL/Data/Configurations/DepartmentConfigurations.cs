@@ -21,11 +21,11 @@ namespace Demo.DAL.Data.Configurations
             builder.Property(d => d.IsDeleted).HasDefaultValue(false);
 
 
-            builder
-                .HasMany(d => d.Employees)
-                .WithOne(e=> e.Department)
-               .HasForeignKey(e => e.DepartmentId)
-               .OnDelete(DeleteBehavior.SetNull);
+            //builder
+            //    .HasMany(d => d.Employees)
+            //    .WithOne(e=> e.Department)
+            //   .HasForeignKey(e => e.DepartmentId)
+            //   .OnDelete(DeleteBehavior.SetNull);
 
             base.Configure(builder);
 

@@ -1,5 +1,5 @@
 using Demo.BLL.Mapping_Profiles;
-
+using Demo.BLL.Services.AttachmentService;
 using Demo.BLL.Services.Classes;
 using Demo.BLL.Services.Interfaces;
 using Demo.DAL.Data;
@@ -17,6 +17,7 @@ namespace Demo.PL
         {
             var builder = WebApplication.CreateBuilder(args);
 
+          
             // Add services to the container.
             builder.Services.AddControllersWithViews(options =>
             {
@@ -28,16 +29,27 @@ namespace Demo.PL
                 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
                 options.UseSqlServer(connectionString);
             });
-            builder.Services.AddScoped<IDepartmentRepository, DepartmentRepository>();
-            builder.Services.AddScoped<IDepartmentServices, DepartmentServices>();
+            //builder.Services.AddScoped<IDepartmentRepository, DepartmentRepository>();
+            //builder.Services.AddScoped<IDepartmentServices, DepartmentServices>();
 
             builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
             builder.Services.AddScoped<IEmployeeService, EmployeeService>();
+
+            builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+            builder.Services.AddScoped<IAttachmentService, AttachmentService>();
 
             builder.Services.AddAutoMapper(M => M.AddProfile(new MappingProfiles()));
 
 
             var app = builder.Build();
+            using (var scope = app.Services.CreateScope())
+            {
+                var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+
+                var model = dbContext.Model;
+                var employeeEntity = model.FindEntityType(typeof(Demo.DAL.Models.EmployeeModel.Employee));
+                Console.WriteLine(string.Join(", ", employeeEntity.GetProperties().Select(p => p.Name)));
+            }
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
