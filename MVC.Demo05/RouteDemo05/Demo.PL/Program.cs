@@ -3,8 +3,10 @@ using Demo.BLL.Services.AttachmentService;
 using Demo.BLL.Services.Classes;
 using Demo.BLL.Services.Interfaces;
 using Demo.DAL.Data;
+using Demo.DAL.Models.IdentityModel;
 using Demo.DAL.Repositories.Classes;
 using Demo.DAL.Repositories.Interfaces;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
@@ -40,6 +42,9 @@ namespace Demo.PL
 
             builder.Services.AddAutoMapper(M => M.AddProfile(new MappingProfiles()));
 
+            builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
+                            .AddEntityFrameworkStores<ApplicationDbContext>()
+                            .AddDefaultTokenProviders();
 
             var app = builder.Build();
             using (var scope = app.Services.CreateScope())
@@ -68,7 +73,7 @@ namespace Demo.PL
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+                pattern: "{controller=Account}/{action=Register}/{id?}");
 
             app.Run();
         }
